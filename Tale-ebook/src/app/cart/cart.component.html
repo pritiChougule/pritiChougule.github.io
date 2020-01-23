@@ -1,0 +1,34 @@
+
+
+
+
+<mat-grid-list cols="12" rowHeight="2:1">
+  <mat-grid-tile  [colspan]="1" [rowspan]="2"></mat-grid-tile>
+  <mat-grid-tile  [colspan]="10" [rowspan]="10">        
+
+
+
+<mat-card>
+  <div ng-app="shoppingCart" ng:controller="cartCtrl">
+    <table>
+      <tr><th>qty</th><th>prize</th><th>total</th></tr>
+      <tr ng:repeat="item in cartItems">
+        <td>
+          <input ng:model="item.qty"/>
+        </td>
+        <td>
+          <input ng:model="item.prize" />
+        </td>
+        <td>
+          {{item.total()}}
+        </td>
+      </tr>
+    </table>
+    total: {{cartTotal}}
+  </div>
+  
+</mat-card>
+</mat-grid-tile>
+<mat-grid-tile  [colspan]="1" [rowspan]="2"></mat-grid-tile>
+</mat-grid-list>
+
